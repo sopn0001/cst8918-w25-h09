@@ -66,7 +66,7 @@ az login
 
 # 2. Initialize and apply Terraform (replace idrissop with your college username)
 terraform init
-terraform apply -var="labelPrefix=idrissop"
+terraform apply -var="labelPrefix=sopn0001"
 
 # 3. Save kubeconfig (use -raw to avoid heredoc markers)
 terraform output -raw kube_config > ./kubeconfig
@@ -83,5 +83,5 @@ kubectl get services
 
 # 6. Cleanup when finished
 kubectl delete -f sample-app.yaml
-terraform destroy -var="labelPrefix=idrissop"
+terraform destroy -var="labelPrefix=sopn0001"
 ```
